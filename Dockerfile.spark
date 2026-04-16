@@ -1,0 +1,15 @@
+FROM apache/spark:3.4.0
+
+USER root
+
+WORKDIR /app
+
+COPY requirements-spark.txt .
+RUN pip install --no-cache-dir -r requirements-spark.txt
+
+COPY processor/ ./processor/
+COPY config/ ./config/
+
+RUN mkdir -p /app/output && chmod 777 /app/output
+
+USER spark

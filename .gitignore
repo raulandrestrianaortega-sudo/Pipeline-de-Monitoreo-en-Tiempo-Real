@@ -1,0 +1,23 @@
+# Outputs generados
+output/
+*.csv
+*.db
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+venv/
+.venv/
+
+# Spark checkpoints
+checkpoints/
+
+# Docker
+.dockerignore
+
+# IDE
+.vscode/
+.idea/
+*.swp
